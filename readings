@@ -1,0 +1,16 @@
+background
+https://www.cin.ufpe.br/~djo/files/Lambda-Calculus%20and%20Combinators.pdf
+
+https://legacy.cs.indiana.edu/~sabry/papers/information-effects.pdf
+
+
+possibly type checking code that can get us started: https://zenodo.org/record/7382711
+
+rust impl details
+https://www.reddit.com/r/rust/comments/nygout/implement_function_on_enum_variants/ 
+https://adriann.github.io/rust_parser.html
+https://github.com/rust-bakery/nom
+
+
+quantum compilation? 
+https://cds.cern.ch/record/2805743/files/2203.08826.pdf
