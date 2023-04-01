@@ -1,7 +1,10 @@
 background
 https://www.cin.ufpe.br/~djo/files/Lambda-Calculus%20and%20Combinators.pdf
 
+reference language (classical)
 https://legacy.cs.indiana.edu/~sabry/papers/information-effects.pdf
+accompanying code - https://legacy.cs.indiana.edu/~sabry/papers/Pi.hs
+arrow languages https://escholarship.org/content/qt1gg3m11q/qt1gg3m11q.pdf?t=ny5v2i
 
 
 possibly type checking code that can get us started: https://zenodo.org/record/7382711
@@ -10,7 +13,43 @@ rust impl details
 https://www.reddit.com/r/rust/comments/nygout/implement_function_on_enum_variants/ 
 https://adriann.github.io/rust_parser.html
 https://github.com/rust-bakery/nom
+how to do scopes: https://groups.google.com/g/comp.compilers/c/lziv9nNqw5s
 
 
 quantum compilation? 
 https://cds.cern.ch/record/2805743/files/2203.08826.pdf
+
+quantum simulation?
+https://arxiv.org/pdf/2204.06045.pdf
+
+quipper
+https://www.mathstat.dal.ca/~selinger/quipper/doc/index.html
+https://github.com/thephoeron/quipper-language
+
+QML
+http://www.cs.nott.ac.uk/~psztxa/publ/qml.pdf
+
+list of simulators (backends?)
+
+type checking
+https://github.com/rust-lang/chalk
+https://rustc-dev-guide.rust-lang.org/type-checking.html
+
+open QASM (backend)0
+https://arxiv.org/pdf/1809.03452.pdf
+https://openqasm.com/
+https://github.com/openqasm/openqasm
+https://arxiv.org/pdf/1707.03429.pdf
+
+HVM (for reference of implementing an ML like lang in rust?)
+https://github.com/HigherOrderCO/HVM/blob/master/src/language/syntax.rs
+
+qiskit x openqasm? https://arxiv.org/pdf/1809.03452.pdf
+
+quantum circuits for quantum channels https://arxiv.org/pdf/1609.08103.pdf
+
+parser generator https://github.com/lalrpop/lalrpop
+
+https://www.cs.ox.ac.uk/ralf.hinze/publications/TypedLR.pdf
+
+OCaML grammar: adapt from MLPi? https://askra.de/software/ocaml-doc/4.02/full-grammar.html

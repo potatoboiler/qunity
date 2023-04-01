@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: >-
+  Qunity: A Unified Language for Quantum and Classical Computing
+message: >-
+  If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: Finn
+    family-names: Voichick
+    email: finn@umd.edu
+    affiliation: University of Maryland
+    orcid: 'https://orcid.org/0000-0002-1913-4178'
+  - given-names: Robert
+    family-names: Rand
+    email: rand@uchicago.edu
+    affiliation: University of Chicago
+    orcid: 'https://orcid.org/0000-0001-6842-5505'
+  - given-names: Michael
+    family-names: Hicks
+    email: mwh@cs.umd.edu
+    affiliation: University of Maryland and Amazon
+    orcid: 'https://orcid.org/0000-0002-2759-9223'
+repository-code: 'https://gitlab.umiacs.umd.edu/finn/qunity'
+abstract: >-
+  We introduce Qunity, a new quantum programming language designed around the
+  central goal of treating quantum computing as a natural generalization of
+  classical computing. Qunity presents a unified syntax where familiar
+  programming constructs can have both quantum and classical effects. For
+  example, one can use sum types to implement the direct sum of linear
+  operators, exception handling syntax to implement projective measurements, and
+  aliasing to induce entanglement. Further, Qunity takes advantage of the
+  overlooked BQP subroutine theorem, allowing one to construct reversible
+  subroutines from irreversible quantum algorithms through the uncomputation of
+  "garbage" outputs. Unlike existing languages that enable quantum aspects with
+  a separate add-on (e.g., gates added to a classical language), we unify
+  quantum and classical computing through novel compositional semantics based on
+  Kraus operators. We present Qunity's syntax, type system, and denotational
+  semantics, showing how it can cleanly express several quantum algorithms. We
+  also outline how Qunity could be compiled to OpenQASM, demonstrating the
+  realizability of our design.
+license: GPL-3.0-or-later
