@@ -7,3 +7,7 @@ Deliverables:
 
 Initial plan for April 7:
 - Laurence can write this probably
+
+Notes:
+- Choose parser library to use, or hand-write
+- Can we compile Coq type checker code (provided as part of the paper's own work) into Haskell or OCaml? might make it easier than rolling our own type checker
