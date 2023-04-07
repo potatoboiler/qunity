@@ -1,6 +1,11 @@
+#[macro_use]
+extern crate nom;
+
 pub mod parser;
 
 use std::collections::{hash_map, HashMap};
+
+use nom::IResult;
 
 type TokenName = String;
 enum TokenType {
@@ -17,6 +22,8 @@ enum ValueType {
     Pair, // ?
 }
 
+
+
 struct Value {}
 
 struct CompilerContext {
@@ -26,6 +33,10 @@ struct CompilerContext {
 struct Scope {
     name: Option<String>,
     bindings: HashMap<TokenName, TokenType>,
+}
+
+fn parse() -> IResult<String, Value> {
+    todo!()
 }
 
 fn main() {
