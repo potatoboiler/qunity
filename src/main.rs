@@ -1,3 +1,9 @@
+#[macro_use]
+extern crate nom;
+
+#[macro_use]
+extern crate lazy_static;
+
 pub mod parser;
 
 use std::collections::{hash_map, HashMap};
