@@ -1,3 +1,4 @@
+#[macro_use]
 use nom::{bytes::complete::tag, IResult};
 
 // Compiler types
