@@ -1,22 +1,45 @@
-ident = { !ASCII_DIGIT ~ (ASCII_ALPHA | ASCII_DIGIT)+ }
+ident      = @{ ASCII_ALPHA ~ (ASCII_ALPHA | ASCII_DIGIT)* }
 WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
 
-types = { "void" | "()" | "bit" | "bitarray" } 
+// builtin types
+types  = @{ "void" | "()" | "bit" | "bitarray" }
+number = @{ ASCII_DIGIT+ }
+
 list = { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
 
 let = { "let" ~ expr ~ "in" ~ expr }
 
-ctrl = { "ctrl" ~ expr ~ expr ~ expr }
+ctrl = @{ "ctrl" ~ expr ~ expr ~ expr }
 
-try = { "try" ~ expr ~ "catch" ~ expr }
+try = @{ "try" ~ expr ~ "catch" ~ expr }
 
-prog = { 
-    "u3" ~ expr ~ expr ~ expr | 
-    "left" ~ expr ~ expr | 
-    "right" ~ expr ~ expr | 
-    "lambda" ~ expr ~ expr ~ expr |
-    "rphase" ~ expr ~ expr ~ expr
+u3     =  { "u3" ~ expr ~ expr ~ expr }
+left   =  { "left" ~ expr ~ expr }
+right  =  { "right" ~ expr ~ expr }
+lambda =  { "lambda" ~ expr ~ expr ~ expr }
+rphase =  { "rphase" ~ expr ~ expr ~ expr }
+chain  =  { expr ~ ("|>" ~ expr)+ }
+prog   = _{
+    u3
+  | left
+  | right
+  | lambda
+  | rphase
 }
+apply  =  { prog ~ expr }
 
-expr = { "(" ~ (expr_inner | expr) ~ ")" }
-expr_inner = { ident | prog ~ expr | expr ~ "|>" ~ prog | list }
+expr   = _{
+    ctrl
+  | try
+  | let
+  | list
+  | prog
+  | ident
+  | types
+  | number
+  | prog ~ expr
+  | expr_p
+}
+expr_p = _{ "(" ~ expr ~ ")" }
+
+stmt = _{ chain | expr }
