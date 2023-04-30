@@ -1,3 +1,10 @@
+extern crate pest;
+#[macro_use]
+extern crate pest_derive;
+
+mod pest_parser;
+mod nom_parser;
+
 #[macro_use]
 extern crate nom;
 
