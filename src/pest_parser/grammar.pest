@@ -3,43 +3,87 @@ WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
 
 // builtin types
 types  = @{ "void" | "()" | "bit" | "bitarray" }
-number = @{ ASCII_DIGIT+ }
+number = @{ ASCII_DIGIT+ | ASCII_DIGIT+ ~ "." ~ ASCII_DIGIT+ }
+list   =  { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
 
-list = { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
+// value type
+expr = _{
+    "(" ~ all ~ ")"
+  | prog
+  | types
+  | ident
+  | number
+}
 
-let = { "let" ~ expr ~ "in" ~ expr }
-
-ctrl = @{ "ctrl" ~ expr ~ expr ~ expr }
-
-try = @{ "try" ~ expr ~ "catch" ~ expr }
-
-u3     =  { "u3" ~ expr ~ expr ~ expr }
-left   =  { "left" ~ expr ~ expr }
-right  =  { "right" ~ expr ~ expr }
-lambda =  { "lambda" ~ expr ~ expr ~ expr }
-rphase =  { "rphase" ~ expr ~ expr ~ expr }
-chain  =  { expr ~ ("|>" ~ expr)+ }
-prog   = _{
+u3     = { "u3" ~ expr ~ expr ~ expr }
+left   = { "left" ~ expr }
+right  = { "right" ~ expr }
+rphase = { "rphase" ~ expr ~ expr ~ expr }
+gphase = { "gphase" ~ expr ~ expr }
+prog   = {
     u3
+  | lambda
   | left
   | right
-  | lambda
+  | gphase
   | rphase
 }
-apply  =  { prog ~ expr }
 
-expr   = _{
-    ctrl
-  | try
+// chain together gates
+chain = { expr ~ ("|>" ~ expr)+ }
+
+ctrl      = { "ctrl" ~ expr ~ types ~ ctrl_list ~ types }
+ctrl_list = { "[" ~ (arm ~ (";" ~ arm)*)* ~ "]" }
+arm       = { expr ~ "=>>" ~ expr }
+
+let    = { "let" ~ expr ~ "in" ~ expr }
+try    = { "try" ~ expr ~ "catch" ~ expr }
+lambda = { "lambda" ~ expr ~ expr ~ expr }
+
+all = _{
+    chain
   | let
-  | list
-  | prog
-  | ident
-  | types
-  | number
-  | prog ~ expr
-  | expr_p
+  | try
+  | ctrl
+  | expr
 }
-expr_p = _{ "(" ~ expr ~ ")" }
 
-stmt = _{ chain | expr }
+program = { ident ~ (ident)* ~ ":=" ~ all }
+
+
+// let = { "let" ~ expr ~ "in" ~ expr }
+
+// ctrl = @{ "ctrl" ~ expr ~ list ~ expr }
+
+// try = @{ "try" ~ expr ~ "catch" ~ expr }
+
+// u3     =  { "u3" ~ expr ~ expr ~ expr }
+// left   =  { "left" ~ expr ~ expr }
+// right  =  { "right" ~ expr ~ expr }
+// lambda =  { "lambda" ~ expr ~ expr ~ expr }
+// rphase =  { "rphase" ~ expr ~ expr ~ expr }
+// chain  =  { expr ~ ("|>" ~ expr)+ }
+// prog   = _{
+    // u3
+  // | left
+  // | right
+  // | lambda
+  // | rphase
+// }
+// apply  =  { prog ~ expr }
+
+// expr   = _{
+    // ctrl
+  // | try
+  // | let
+  // | list
+  // | prog
+  // | ident
+  // | types
+  // | number
+  // | prog ~ expr
+  // | expr_p
+// }
+// expr_p = _{ "(" ~ expr ~ ")" }
+
+// stmt = _{ chain | expr }
