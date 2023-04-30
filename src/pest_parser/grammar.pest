@@ -1,6 +1,22 @@
-alpha = { 'a'..'z' | 'A'..'Z' }
-digit = { '0'..'9' }
+ident = { !ASCII_DIGIT ~ (ASCII_ALPHA | ASCII_DIGIT)+ }
+WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
 
-ident = { !digit ~ (alpha | digit)+ }
+types = { "void" | "()" | "bit" | "bitarray" } 
+list = { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
 
-unit = { '()' }
+let = { "let" ~ expr ~ "in" ~ expr }
+
+ctrl = { "ctrl" ~ expr ~ expr ~ expr }
+
+try = { "try" ~ expr ~ "catch" ~ expr }
+
+prog = { 
+    "u3" ~ expr ~ expr ~ expr | 
+    "left" ~ expr ~ expr | 
+    "right" ~ expr ~ expr | 
+    "lambda" ~ expr ~ expr ~ expr |
+    "rphase" ~ expr ~ expr ~ expr
+}
+
+expr = { "(" ~ (expr_inner | expr) ~ ")" }
+expr_inner = { ident | prog ~ expr | expr ~ "|>" ~ prog | list }
