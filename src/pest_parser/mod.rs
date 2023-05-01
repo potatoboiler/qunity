@@ -115,8 +115,16 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
             todo!()
         }
         Rule::lambda => {
-            // fixme: lol
-            todo!()
+            let pair_inner: Vec<_> = pair.into_inner().collect();
+            let split = pair_inner.split_last().unwrap();
+            Node::Lambda {
+                args: split
+                    .1
+                    .iter()
+                    .map(|p| p.as_span().as_str().into())
+                    .collect(),
+                body: Box::new(build_ast(split.0.clone())),
+            }
         }
         Rule::chain => {
             let pair_vec: Vec<_> = pair.into_inner().collect(); // hack so that it doesn't DFS all the way
