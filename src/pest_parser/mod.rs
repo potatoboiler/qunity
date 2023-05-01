@@ -20,12 +20,19 @@ pub(crate) enum Node {
     },
     Number(f64),
     Ident(String),
+    Types(String),
     Apply(Box<(Node, Node)>),
     // Lambda(Box<(Node, Node, Node)>),
     Ctrl(Box<(Node, Node, Vec<(Node, Node)>, Node)>),
     Prog {
         name: String,
         args: Vec<Node>,
+    },
+    Rphase {
+        r#type: Box<Node>,
+        // arg: Box<Node>,
+        phase1: Box<Node>,
+        phase2: Box<Node>,
     },
     Lambda {
         // thsi is kind of a hack
@@ -84,33 +91,9 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
                 expr: Box::new(build_ast(program_def)),
             }
         }
-        /*
-        Rule::prog => {
-            let pair_inner: Vec<_> = pair.into_inner().collect();
-            println!("{:#?}", pair_inner);
-            let name = pair_inner[0].as_span().as_str().to_string();
-            let split = pair_inner.split_at(1);
-            match name.as_str() {
-                "lambda" => {
-                    let slice = &pair_inner[1..pair_inner.len() - 1];
-                    Node::Lambda {
-                        args: slice.iter().map(|pair| pair.to_string()).collect(),
-                        body: Box::new(build_ast(pair_inner.last().unwrap().clone())),
-                    }
-                }
-                _ => Node::Prog {
-                    name: name,
-                    args: split
-                        .1
-                        .iter()
-                        .map(|pair| build_ast(pair.clone()))
-                        .collect(),
-                },
-            }
-        }
-        */
         Rule::number => Node::Number(pair.as_span().as_str().parse::<f64>().unwrap()),
         Rule::ident => Node::Ident(pair.as_span().as_str().into()),
+        Rule::types => Node::Types(pair.as_span().as_str().into()),
         Rule::ctrl => {
             let pair_inner: Vec<_> = pair.into_inner().collect();
             let ctrl_list = pair_inner[2].clone();
@@ -152,8 +135,31 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
         Rule::list => {
             todo!()
         }
-        asdf => {
-            todo!("{}", format!("{:?}", asdf))
+        Rule::gphase => {
+            // Node::Ident("Placeholder gphase".to_string());
+            let mut inner = pair.into_inner().map(|pair| Box::new(build_ast(pair)));
+            let arg_type = inner.next().unwrap();
+            // let arg = inner.next().unwrap();
+            let phase = inner.next().unwrap();
+            Node::Rphase {
+                r#type: arg_type,
+                // arg: (),
+                phase1: phase.clone(),
+                phase2: phase.clone(),
+            }
+        }
+        Rule::rphase => {
+            // Node::Ident("Placeholder rphase".to_string());
+            let mut inner = pair.into_inner().map(|pair| Box::new(build_ast(pair)));
+            Node::Rphase {
+                r#type: inner.next().unwrap(),
+                // arg: inner.next().unwrap(),
+                phase1: inner.next().unwrap(),
+                phase2: inner.next().unwrap(),
+            }
+        }
+        rule => {
+            todo!("{}", format!("{:?}", rule))
         }
     }
 }

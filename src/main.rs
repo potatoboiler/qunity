@@ -52,5 +52,5 @@ fn parse() -> IResult<String, Value> {
 fn main() {
     let file = std::fs::read_to_string("lol.q").expect("Noo file?");
     let astnode = self::pest_parser::parse(file.as_str()).expect("bad ast");
-    println!("{:?}", astnode);
+    println!("{:#?}", astnode);
 }
