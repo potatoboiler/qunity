@@ -112,7 +112,26 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
         Rule::number => Node::Number(pair.as_span().as_str().parse::<f64>().unwrap()),
         Rule::ident => Node::Ident(pair.as_span().as_str().into()),
         Rule::ctrl => {
-            todo!()
+            let pair_inner: Vec<_> = pair.into_inner().collect();
+            let ctrl_list = pair_inner[2].clone();
+            let ctrl_matcher: Vec<(Node, Node)> = ctrl_list
+                .into_inner()
+                .map(|arm| {
+                    assert!(matches!(arm.as_rule(), Rule::arm));
+                    let inner: Vec<_> = arm.into_inner().collect();
+                    assert_eq!(inner.len(), 2);
+                    (build_ast(inner[0].clone()), build_ast(inner[1].clone()))
+                })
+                .collect();
+            Node::Ctrl(Box::new((
+                build_ast(pair_inner[0].clone()),
+                build_ast(pair_inner[1].clone()),
+                ctrl_matcher,
+                build_ast(pair_inner[3].clone()),
+            )))
+        }
+        Rule::arm => {
+            panic!("Arms should be parsed in the ctrl arm; should not be standalone!")
         }
         Rule::lambda => {
             let pair_inner: Vec<_> = pair.into_inner().collect();
@@ -133,8 +152,8 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
         Rule::list => {
             todo!()
         }
-        _ => {
-            todo!()
+        asdf => {
+            todo!("{}", format!("{:?}", asdf))
         }
     }
 }
