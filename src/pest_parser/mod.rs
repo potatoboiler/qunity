@@ -14,7 +14,7 @@ struct QParser;
 pub(crate) enum Node {
     Program {
         prog: String,
-        ops: Vec<Node>,
+        ops: Vec<String>,
         expr: Box<Node>,
     },
     Number(f64),
@@ -57,13 +57,13 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
     match pair.as_rule() {
         Rule::program => {
             let children: Vec<pest::iterators::Pair<Rule>> = pair.into_inner().collect();
+            let _program_name = children[0].as_span().as_str();
+            let idents = &children[1..children.len() - 1];
             {
                 let mut ctx_lock = ctx.lock().unwrap();
 
-                let _program_name = children[0].as_span().as_str();
                 // ctx.program_names.insert(program_name, v)
 
-                let idents = &children[1..children.len() - 1];
                 ctx_lock.variable_bindings.extend(
                     idents
                         .iter()
@@ -71,7 +71,14 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
                 );
             }
             let program_def = children.last().unwrap().clone();
-            build_ast(program_def)
+            Node::Program {
+                prog: _program_name.to_string(),
+                ops: idents
+                    .iter()
+                    .map(|pair| pair.as_span().as_str().to_string())
+                    .collect(),
+                expr: Box::new(build_ast(program_def)),
+            }
         }
         Rule::prog => {
             todo!()
