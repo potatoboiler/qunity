@@ -20,7 +20,7 @@ left   = { "left" ~ expr }
 right  = { "right" ~ expr }
 rphase = { "rphase" ~ expr ~ expr ~ expr }
 gphase = { "gphase" ~ expr ~ expr }
-prog   = {
+prog   = _{
     u3
   | lambda
   | left

@@ -21,8 +21,17 @@ pub(crate) enum Node {
     Number(f64),
     Ident(String),
     Apply(Box<(Node, Node)>),
-    Lambda(Box<(Node, Node, Node)>),
+    // Lambda(Box<(Node, Node, Node)>),
     Ctrl(Box<(Node, Node, Vec<(Node, Node)>, Node)>),
+    Prog {
+        name: String,
+        args: Vec<Node>,
+    },
+    Lambda {
+        // thsi is kind of a hack
+        args: Vec<String>,
+        body: Box<Node>, // FIXME:
+    },
     Chain(Vec<Node>),
 }
 
@@ -47,7 +56,7 @@ pub(crate) fn parse(source: &str) -> Result<Vec<Node>, pest::error::Error<Rule>>
 
     for pair in pairs {
         if let Rule::program = pair.as_rule() {
-            println!("{:#?}", pair);
+            // println!("{:#?}", pair);
             ast.push(build_ast(pair))
         } else {
             panic!("LOL")
@@ -61,22 +70,13 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
     match pair.as_rule() {
         Rule::program => {
             let children: Vec<pest::iterators::Pair<Rule>> = pair.into_inner().collect();
-            let _program_name = children[0].as_span().as_str();
+
+            let program_name = children[0].as_span().as_str();
             let idents = &children[1..children.len() - 1];
-            {
-                let mut ctx_lock = ctx.lock().unwrap();
 
-                // ctx.program_names.insert(program_name, v)
-
-                ctx_lock.variable_bindings.extend(
-                    idents
-                        .iter()
-                        .map(|pair| pair.as_span().as_str().to_string()),
-                );
-            }
             let program_def = children.last().unwrap().clone();
             Node::Program {
-                prog: _program_name.to_string(),
+                prog: program_name.to_string(),
                 ops: idents
                     .iter()
                     .map(|pair| pair.as_span().as_str().to_string())
@@ -84,15 +84,38 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
                 expr: Box::new(build_ast(program_def)),
             }
         }
+        /*
         Rule::prog => {
-            todo!()
+            let pair_inner: Vec<_> = pair.into_inner().collect();
+            println!("{:#?}", pair_inner);
+            let name = pair_inner[0].as_span().as_str().to_string();
+            let split = pair_inner.split_at(1);
+            match name.as_str() {
+                "lambda" => {
+                    let slice = &pair_inner[1..pair_inner.len() - 1];
+                    Node::Lambda {
+                        args: slice.iter().map(|pair| pair.to_string()).collect(),
+                        body: Box::new(build_ast(pair_inner.last().unwrap().clone())),
+                    }
+                }
+                _ => Node::Prog {
+                    name: name,
+                    args: split
+                        .1
+                        .iter()
+                        .map(|pair| build_ast(pair.clone()))
+                        .collect(),
+                },
+            }
         }
+        */
         Rule::number => Node::Number(pair.as_span().as_str().parse::<f64>().unwrap()),
         Rule::ident => Node::Ident(pair.as_span().as_str().into()),
         Rule::ctrl => {
             todo!()
         }
         Rule::lambda => {
+            // fixme: lol
             todo!()
         }
         Rule::chain => {
