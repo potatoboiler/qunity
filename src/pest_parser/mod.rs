@@ -3,6 +3,7 @@ use std::{
     sync::Mutex,
 };
 
+use nom::sequence::pair;
 use pest::Parser;
 use pest_derive::Parser;
 
@@ -20,6 +21,9 @@ pub(crate) enum Node {
     Number(f64),
     Ident(String),
     Apply(Box<(Node, Node)>),
+    Lambda(Box<(Node, Node, Node)>),
+    Ctrl(Box<(Node, Node, Vec<(Node, Node)>, Node)>),
+    Chain(Vec<Node>),
 }
 
 struct CompilerContext {
@@ -44,7 +48,7 @@ pub(crate) fn parse(source: &str) -> Result<Vec<Node>, pest::error::Error<Rule>>
     for pair in pairs {
         if let Rule::program = pair.as_rule() {
             println!("{:#?}", pair);
-            // ast.push(Node::Program(Box::new(build_ast(pair))))
+            ast.push(build_ast(pair))
         } else {
             panic!("LOL")
         }
@@ -83,12 +87,8 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
         Rule::prog => {
             todo!()
         }
-        Rule::number => {
-            todo!()
-        }
-        Rule::ident => {
-            todo!()
-        }
+        Rule::number => Node::Number(pair.as_span().as_str().parse::<f64>().unwrap()),
+        Rule::ident => Node::Ident(pair.as_span().as_str().into()),
         Rule::ctrl => {
             todo!()
         }
@@ -96,7 +96,8 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
             todo!()
         }
         Rule::chain => {
-            todo!()
+            let pair_vec: Vec<_> = pair.into_inner().collect(); // hack so that it doesn't DFS all the way
+            Node::Chain(pair_vec.iter().map(|p| build_ast(p.clone())).collect())
         }
         Rule::list => {
             todo!()
