@@ -1,0 +1,20 @@
+-docroot Qunity
+-Q src Qunity
+-Q lib/plf PLF
+
+lib/plf/LibTactics.v
+
+src/Tactics.v
+src/Lists.v
+src/Sets.v
+src/Reals.v
+src/Types.v
+src/Syntax.v
+src/Contexts.v
+src/Typing.v
+src/Typechecking.v
+src/examples/QList.v
+src/examples/Deutsch.v
+src/examples/DeutschJozsa.v
+src/examples/Fourier.v
+src/examples/Walk.v

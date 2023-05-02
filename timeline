@@ -1,0 +1,13 @@
+Deliverables:
+- parser + grammar (can adapt Coq syntax, see references/) (note "information effects"/classical sublanguage paper in readings file)
+- AST/IR just before the quantum circuit (see section 6 of qunity preprint)
+- quantum Circuit I (see section 6 of qunity preprint)
+- compiling IR into circuit (hopefully this part is easy?)
+- write some sample code (say, QFT or Deutsch or Fourier Sampling or a basic "library", anything works)
+
+Initial plan for April 7:
+- Laurence can write this probably
+
+Notes:
+- Choose parser library to use, or hand-write
+- Can we compile Coq type checker code (provided as part of the paper's own work) into Haskell or OCaml? might make it easier than rolling our own type checker
