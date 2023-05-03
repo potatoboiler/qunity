@@ -2,10 +2,10 @@ ident      = @{ ASCII_ALPHA ~ (ASCII_ALPHA | ASCII_DIGIT)* }
 WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
 
 // builtin types
-types  = @{ "void" | "()" | "bit" | array_t }
+types  =  { "void" | "()" | "bit" | array_t }
 number = @{ ASCII_DIGIT+ | ASCII_DIGIT+ ~ "." ~ ASCII_DIGIT+ }
 // list    =  { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
-array_t = { "array" ~ expr ~ expr }
+array_t = { "array" ~ types ~ number }
 
 // value type
 expr = _{
