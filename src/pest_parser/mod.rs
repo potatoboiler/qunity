@@ -3,7 +3,8 @@ use std::{
     sync::Mutex,
 };
 
-use nom::sequence::pair;
+mod typetree;
+
 use pest::Parser;
 use pest_derive::Parser;
 
@@ -13,33 +14,19 @@ struct QParser;
 
 #[derive(Clone, Debug)]
 pub(crate) enum Node {
-    Program {
-        prog: String,
-        ops: Vec<String>,
-        expr: Box<Node>,
-    },
+    Program(String, Vec<String>, Box<Node>),
     Number(f64),
     Ident(String),
     Types(String),
     Apply(Box<(Node, Node)>),
     // Lambda(Box<(Node, Node, Node)>),
     Ctrl(Box<(Node, Node, Vec<(Node, Node)>, Node)>),
-    Prog {
-        name: String,
-        args: Vec<Node>,
-    },
-    Rphase {
-        r#type: Box<Node>,
-        // arg: Box<Node>,
-        phase1: Box<Node>,
-        phase2: Box<Node>,
-    },
-    Lambda {
-        // thsi is kind of a hack
-        args: Vec<String>,
-        body: Box<Node>, // FIXME:
-    },
+    Prog (String, Vec<Node>),
+    Rphase(Box<(Node, Node, Node)>),
+    Lambda(Vec<String>, Box<Node>),
     Chain(Vec<Node>),
+    Array(Box<Node>, i64),
+    U3(Box<(Node, Node, Node)>),
 }
 
 struct CompilerContext {
@@ -132,8 +119,21 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
             let pair_vec: Vec<_> = pair.into_inner().collect(); // hack so that it doesn't DFS all the way
             Node::Chain(pair_vec.iter().map(|p| build_ast(p.clone())).collect())
         }
-        Rule::list => {
-            todo!()
+        Rule::array_t => {
+            let mut inner = pair.into_inner();
+            Node::Array {
+                types: Box::new(build_ast(inner.next().unwrap())),
+                size: inner
+                    .next()
+                    .unwrap()
+                    .as_span()
+                    .as_str()
+                    .parse::<f64>()
+                    .unwrap() as i64,
+            }
+        }
+        Rule::left | Rule::right => {
+            todo!("Sum types do not exist yet")
         }
         Rule::gphase => {
             // Node::Ident("Placeholder gphase".to_string());
@@ -157,6 +157,14 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
                 phase1: inner.next().unwrap(),
                 phase2: inner.next().unwrap(),
             }
+        }
+        Rule::u3 => {
+            let mut inner = pair.into_inner();
+            Node::U3(Box::new((
+                build_ast(inner.next().unwrap()),
+                build_ast(inner.next().unwrap()),
+                build_ast(inner.next().unwrap()),
+            )))
         }
         rule => {
             todo!("{}", format!("{:?}", rule))
