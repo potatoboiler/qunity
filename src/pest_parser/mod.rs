@@ -1,7 +1,4 @@
-use std::{
-    collections::{HashMap, HashSet},
-    sync::Mutex,
-};
+use std::{collections::HashSet, sync::Mutex};
 
 mod typetree;
 
@@ -14,16 +11,26 @@ struct QParser;
 
 #[derive(Clone, Debug)]
 pub(crate) enum Node {
-    Program(String, Vec<String>, Box<Node>),
+    Program(
+        String,      // program_name
+        Vec<String>, // operands
+        Box<Node>,   // program body
+    ),
     Number(f64),
     Ident(String),
     Types(String),
     Apply(Box<(Node, Node)>),
     // Lambda(Box<(Node, Node, Node)>),
     Ctrl(Box<(Node, Node, Vec<(Node, Node)>, Node)>),
-    Prog (String, Vec<Node>),
+    Prog(
+        String,    // name
+        Vec<Node>, // args
+    ),
     Rphase(Box<(Node, Node, Node)>),
-    Lambda(Vec<String>, Box<Node>),
+    Lambda(
+        Vec<String>, // arguments
+        Box<Node>,   // lambda body
+    ),
     Chain(Vec<Node>),
     Array(Box<Node>, i64),
     U3(Box<(Node, Node, Node)>),
@@ -69,14 +76,14 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
             let idents = &children[1..children.len() - 1];
 
             let program_def = children.last().unwrap().clone();
-            Node::Program {
-                prog: program_name.to_string(),
-                ops: idents
+            Node::Program(
+                program_name.to_string(),
+                idents
                     .iter()
                     .map(|pair| pair.as_span().as_str().to_string())
                     .collect(),
-                expr: Box::new(build_ast(program_def)),
-            }
+                Box::new(build_ast(program_def)),
+            )
         }
         Rule::number => Node::Number(pair.as_span().as_str().parse::<f64>().unwrap()),
         Rule::ident => Node::Ident(pair.as_span().as_str().into()),
@@ -106,14 +113,14 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
         Rule::lambda => {
             let pair_inner: Vec<_> = pair.into_inner().collect();
             let split = pair_inner.split_last().unwrap();
-            Node::Lambda {
-                args: split
+            Node::Lambda(
+                split
                     .1
                     .iter()
                     .map(|p| p.as_span().as_str().into())
                     .collect(),
-                body: Box::new(build_ast(split.0.clone())),
-            }
+                Box::new(build_ast(split.0.clone())),
+            )
         }
         Rule::chain => {
             let pair_vec: Vec<_> = pair.into_inner().collect(); // hack so that it doesn't DFS all the way
@@ -121,42 +128,36 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
         }
         Rule::array_t => {
             let mut inner = pair.into_inner();
-            Node::Array {
-                types: Box::new(build_ast(inner.next().unwrap())),
-                size: inner
+            Node::Array(
+                Box::new(build_ast(inner.next().unwrap())),
+                inner
                     .next()
                     .unwrap()
                     .as_span()
                     .as_str()
                     .parse::<f64>()
                     .unwrap() as i64,
-            }
+            )
         }
         Rule::left | Rule::right => {
             todo!("Sum types do not exist yet")
         }
         Rule::gphase => {
             // Node::Ident("Placeholder gphase".to_string());
-            let mut inner = pair.into_inner().map(|pair| Box::new(build_ast(pair)));
+            let mut inner = pair.into_inner().map(|pair| build_ast(pair));
             let arg_type = inner.next().unwrap();
             // let arg = inner.next().unwrap();
             let phase = inner.next().unwrap();
-            Node::Rphase {
-                r#type: arg_type,
-                // arg: (),
-                phase1: phase.clone(),
-                phase2: phase.clone(),
-            }
+            Node::Rphase(Box::new((arg_type, phase.clone(), phase.clone())))
         }
         Rule::rphase => {
             // Node::Ident("Placeholder rphase".to_string());
-            let mut inner = pair.into_inner().map(|pair| Box::new(build_ast(pair)));
-            Node::Rphase {
-                r#type: inner.next().unwrap(),
-                // arg: inner.next().unwrap(),
-                phase1: inner.next().unwrap(),
-                phase2: inner.next().unwrap(),
-            }
+            let mut inner = pair.into_inner().map(|pair| build_ast(pair));
+            Node::Rphase(Box::new((
+                inner.next().unwrap(),
+                inner.next().unwrap(),
+                inner.next().unwrap(),
+            )))
         }
         Rule::u3 => {
             let mut inner = pair.into_inner();
