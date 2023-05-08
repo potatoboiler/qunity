@@ -2,9 +2,10 @@ ident      = @{ ASCII_ALPHA ~ (ASCII_ALPHA | ASCII_DIGIT)* }
 WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
 
 // builtin types
-types  = @{ "void" | "()" | "bit" | "bitarray" }
+types  =  { "void" | "()" | "bit" | array_t }
 number = @{ ASCII_DIGIT+ | ASCII_DIGIT+ ~ "." ~ ASCII_DIGIT+ }
-list   =  { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
+// list    =  { "[" ~ (expr ~ (";" ~ expr)*)* ~ "]" }
+array_t = { "array" ~ types ~ number }
 
 // value type
 expr = _{
@@ -15,11 +16,11 @@ expr = _{
   | number
 }
 
-u3     = { "u3" ~ expr ~ expr ~ expr }
-left   = { "left" ~ expr }
-right  = { "right" ~ expr }
-rphase = { "rphase" ~ expr ~ expr ~ expr }
-gphase = { "gphase" ~ expr ~ expr }
+u3     =  { "u3" ~ expr ~ expr ~ expr }
+left   =  { "left" ~ expr }
+right  =  { "right" ~ expr }
+rphase =  { "rphase" ~ expr ~ expr ~ expr }
+gphase =  { "gphase" ~ expr ~ expr }
 prog   = _{
     u3
   | lambda
