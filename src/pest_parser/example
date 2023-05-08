@@ -1,0 +1,80 @@
+[
+    Program {
+        prog: "deutsch",
+        ops: [
+            "f",
+        ],
+        expr: Chain(
+            [
+                Ident(
+                    "zero",
+                ),
+                Ident(
+                    "had",
+                ),
+                Lambda {
+                    args: [
+                        "x",
+                        "bit",
+                    ],
+                    body: Ctrl(
+                        (
+                            Chain(
+                                [
+                                    Ident(
+                                        "x",
+                                    ),
+                                    Ident(
+                                        "f",
+                                    ),
+                                ],
+                            ),
+                            Types(
+                                "bit",
+                            ),
+                            [
+                                (
+                                    Ident(
+                                        "zero",
+                                    ),
+                                    Ident(
+                                        "x",
+                                    ),
+                                ),
+                                (
+                                    Ident(
+                                        "one",
+                                    ),
+                                    Chain(
+                                        [
+                                            Ident(
+                                                "x",
+                                            ),
+                                            Rphase {
+                                                type: Types(
+                                                    "bit",
+                                                ),
+                                                phase1: Ident(
+                                                    "pi",
+                                                ),
+                                                phase2: Ident(
+                                                    "pi",
+                                                ),
+                                            },
+                                        ],
+                                    ),
+                                ),
+                            ],
+                            Types(
+                                "bit",
+                            ),
+                        ),
+                    ),
+                },
+                Ident(
+                    "had",
+                ),
+            ],
+        ),
+    },
+]
