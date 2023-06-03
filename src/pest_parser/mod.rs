@@ -1,6 +1,6 @@
 use std::{collections::HashSet, sync::Mutex};
 
-mod typetree;
+pub(crate) mod typetree;
 
 use pest::Parser;
 use pest_derive::Parser;
@@ -19,19 +19,14 @@ pub(crate) enum Node {
     Number(f64),
     Ident(String),
     Types(String),
-    Apply(Box<(Node, Node)>),
     // Lambda(Box<(Node, Node, Node)>),
     Ctrl(Box<(Node, Node, Vec<(Node, Node)>, Node)>),
-    Prog(
-        String,    // name
-        Vec<Node>, // args
-    ),
     Rphase(Box<(Node, Node, Node)>),
     Lambda(
         Vec<String>, // arguments
         Box<Node>,   // lambda body
     ),
-    Chain(Vec<Node>),
+    Rapply(Vec<Node>),
     Array(Box<Node>, i64),
     U3(Box<(Node, Node, Node)>),
 }
@@ -39,14 +34,14 @@ pub(crate) enum Node {
 struct CompilerContext {
     // variable_bindings: HashMap<String, Node>,
     // program_names: HashMap<String, Node>,
-    variable_bindings: HashSet<String>,
-    program_names: HashSet<String>,
+    _variable_bindings: HashSet<String>,
+    _program_names: HashSet<String>,
 }
 
 lazy_static! {
-    static ref ctx: Mutex<CompilerContext> = Mutex::new(CompilerContext {
-        variable_bindings: HashSet::new(),
-        program_names: HashSet::new(),
+    static ref _CTX: Mutex<CompilerContext> = Mutex::new(CompilerContext {
+        _variable_bindings: HashSet::new(),
+        _program_names: HashSet::new(),
     });
 }
 
@@ -122,9 +117,9 @@ fn build_ast(pair: pest::iterators::Pair<Rule>) -> Node {
                 Box::new(build_ast(split.0.clone())),
             )
         }
-        Rule::chain => {
+        Rule::rapply => {
             let pair_vec: Vec<_> = pair.into_inner().collect(); // hack so that it doesn't DFS all the way
-            Node::Chain(pair_vec.iter().map(|p| build_ast(p.clone())).collect())
+            Node::Rapply(pair_vec.iter().map(|p| build_ast(p.clone())).collect())
         }
         Rule::array_t => {
             let mut inner = pair.into_inner();

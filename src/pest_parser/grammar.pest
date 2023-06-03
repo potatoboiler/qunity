@@ -31,7 +31,7 @@ prog   = _{
 }
 
 // chain together gates
-chain = { expr ~ ("|>" ~ expr)+ }
+rapply = { expr ~ "|>" ~ all }
 
 ctrl      = { "ctrl" ~ expr ~ types ~ ctrl_list ~ types }
 ctrl_list = { "[" ~ (arm ~ (";" ~ arm)*)* ~ "]" }
@@ -42,7 +42,7 @@ try    = { "try" ~ expr ~ "catch" ~ expr }
 lambda = { "lambda" ~ expr ~ expr ~ expr }
 
 all = _{
-    chain
+    rapply
   | let
   | try
   | ctrl
