@@ -7,9 +7,9 @@
 (source
  (github potatoboiler/ocaml-qunity))
 
-(authors "Author Name")
+(authors "potatoboiler")
 
-(maintainers "Maintainer Name")
+(maintainers "n/a")
 
 (license LICENSE)
 
