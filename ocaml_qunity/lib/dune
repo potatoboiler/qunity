@@ -1,2 +1,4 @@
 (library
- (name ocaml_qunity))
+ (name ocaml_qunity)
+ (libraries base hardcaml)
+ (preprocess (pps ppx_jane ppx_hardcaml)))

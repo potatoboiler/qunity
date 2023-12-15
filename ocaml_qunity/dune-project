@@ -1,11 +1,11 @@
-(lang dune 3.11)
+(lang dune 3.12)
 
 (name ocaml_qunity)
 
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github potatoboiler/ocaml-qunity))
 
 (authors "Author Name")
 
