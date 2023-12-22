@@ -1,6 +1,8 @@
 open Stdlib
 (* open Hardcaml *)
 
+let todo = failwith "TODO"
+
 (**
     https://diskuv.github.io/dkml-dune-dsl/dkml-dune-dsl/index.html
     https://discuss.ocaml.org/t/any-tutorial-on-designing-edsl-in-ocaml/10781
@@ -9,75 +11,93 @@ open Stdlib
     https://github.com/o1-labs/snarky
     *)
 
-open Symtab
-open Openqasm
+type qubit_primitive = [ `Qubit | `QubitReg of int | `State ]
 
-(* Base types for type checking *)
-type type0 = Void | Qunit | Superpos of type0 * type0 | Joint of type0 * type0
+type gate_primitive =
+  [ `Rphase of float * float
+  | `U3 of float * float * float
+  | `NamedPrim of string ]
 
-type expr =
-  | Null
-  | Var of string
-  | Qpair of expr * expr
-  | Ctrl of expr * type0 * (expr * expr) list * type0
-  | Try of expr * expr
-  | Apply of expr * expr (* originally prog * expr *)
-  | U3 of float * float * float
-  | Left of type0 * type0
-  | Right of type0 * type0
-  | Lambda of expr * type0 * expr
-  (* | Rphase of type0 * expr * float * float *)
-  | Rphase of type0 * float * float (* gate only *)
-
-type expr_types = Expr of expr | Foo of float * float
-
-let qubit = Superpos (Qunit, Qunit)
-let tab = Symtab.empty
-
-(* Constants *)
-let pi = Float.pi
-let zero = Left (Qunit, Qunit)
-let one = Right (Qunit, Qunit)
-let had = U3 (pi /. 2., 0., pi)
-
-(* Sugar *)
-(* let gphase t gamma x = Rphase (t, x, gamma, gamma) *)
-let gphase t gamma = Rphase (t, gamma, gamma)
-
-(* Compilation code *)
-let typecheck : expr_types -> (unit, string) result = fun _ -> failwith "TODO"
-
-let compile : expr_types -> Openqasm.directive list =
- fun x ->
-  let default_program_header = [ Version (2, 0); Include "qelib.inc" ] in
-  let compile_expr e =
-    match e with
-    | Lambda _ -> failwith ""
-    | Apply _ -> failwith ""
-    | _ -> failwith "TODO"
-  in
-  default_program_header
-  @ match x with Expr e -> compile_expr e | _ -> failwith "Bad typing?"
-
-(* Test driver *)
-let x = compile (Expr zero)
-let basic = Apply (had, zero)
-
-(* note: f is a classical oracle
-   f: B -> B *)
-let deutsch f =
-  Apply
-    ( had,
-      Apply
-        ( Lambda
-            ( Var "x",
-              qubit,
-              Ctrl
-                ( Apply (f, Var "x"),
-                  qubit,
-                  [ (zero, Var "x"); (one, Apply (gphase qubit pi, Var "x")) ],
-                  qubit ) ),
-          Apply (had, zero) ) )
+type ast_node =
+  [ gate_primitive
+  | qubit_primitive
+  | `ApplySeq of ast_node list
+  | `Prod of ast_node list
+  | `Pair of ast_node * ast_node
+  | (*| `Apply of gate_construct * ast_node *)
+    `Lambda of
+    string * qubit_primitive * ast_node
+  | `TryCatch of
+    ast_node * ast_node
+    (* Pair is product unless we have a quantum channel, but we need to think about how to implement this... measurements? *)
+  | `Ctrl of (ast_node * ast_node) list ]
 
 (* Create simple cnot using hardcaml *)
 (* Qunity only supports ctrl, try/except, etc., and phasing.*)
+
+type wire =
+  | Input of qubit_primitive
+  | Output of int
+  | Connected of string * int
+  | Ancilla of int (* ? *)
+  | Combined of (wire * int) list
+
+type subcircuit = {
+  name : string;
+  input : wire list;
+  output : wire list;
+  prep : wire; (* ancilla input *)
+  flag : wire; (* clean ancilla output *)
+  garbage : wire; (* dirty output ancilla *)
+  operation : string option;
+  internals : subcircuit_internals list;
+}
+
+and subcircuit_internals =
+  | Product of subcircuit_internals list
+  | Prim of gate_primitive
+
+type graph = { edges : string Symtab.symtab; nodes : subcircuit Symtab.symtab }
+
+let build_graph (ast : ast_node) : graph =
+  let name_counter = ref 0 in
+  let wire_counter = ref 0 in
+  let rec builder (graph : graph) (ast : ast_node) =
+    match ast with
+    | `ApplySeq ls ->
+        let folder (graph : graph) (ast : ast_node) =
+          match ast with
+          (* gate_primitive *)
+          (* Generate  *)
+          | `Rphase (f1, f2) -> todo
+          | `U3 (f1, f2, f3) -> todo
+          | `NamedPrim s -> todo
+          (* rest *)
+          | qubit_primitive -> todo
+          | _ -> todo
+        in
+        List.fold_left folder graph ls
+    | _ -> todo
+  in
+
+  builder { edges = Symtab.empty; nodes = Symtab.empty } ast
+(* returns output lists and dependency graph *)
+(* pair ( x, y )*)
+
+let rec compile expr =
+  (* assumign the expr type checks *)
+  let preprocess e = () in
+  match expr with _ -> failwith "TODO"
+
+let basic_hadamard_example = `ApplySeq [ `State; `NamedPrim "had" ]
+
+let deutsch_example =
+  `ApplySeq
+    [ `Qubit; `NamedPrim "had"; `Lambda ("x", `Qubit, []); `NamedPrim "had" ]
+(*zero
+  |> had
+  |> lambda x bit
+       (ctrl (x |> f)
+           bit [zero =>> x; one =>> (x |> gphase bit pi)] bit)
+  |> had.
+*)

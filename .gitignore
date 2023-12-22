@@ -32,3 +32,6 @@ _opam/
 
 # venv for staq
 .venv/
+
+# vscode generated files
+.vscode/

@@ -1,8 +1,12 @@
+(env
+  (dev
+    (flags (:standard -warn-error -A))))
+    
 (library
  (name ocaml_qunity)
  (libraries base hardcaml)
  (preprocess (pps ppx_jane ppx_hardcaml))
- (modules openqasm staq qunity symtab v))
+ (modules openqasm staq qunity symtab v typing))
 
 (executable
  (name fake)
