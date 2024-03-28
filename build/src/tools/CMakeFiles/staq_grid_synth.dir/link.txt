@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_grid_synth.dir/grid_synth.cpp.o -o staq_grid_synth  -lgmp -lgmpxx 

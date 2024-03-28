@@ -1,0 +1,199 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"src/tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "staq_circ::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "staq_desugarer::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "staq_device_generator::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "staq_grid_synth::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "staq_inliner::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "staq_ionq::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "staq_lattice_surgery::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "staq_mapper::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "staq_oracle_synthesizer::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "staq_projectq::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "staq_qasm_synth::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "staq_qsharp::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "staq_quil::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "staq_resource_estimator::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "staq_rotation_optimizer::@de05559f4338c8534979"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "staq_simplifier::@de05559f4338c8534979"
+		}
+	],
+	"id" : "tools::@de05559f4338c8534979",
+	"name" : "tools",
+	"paths" : 
+	{
+		"build" : "src/tools",
+		"source" : "src/tools"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

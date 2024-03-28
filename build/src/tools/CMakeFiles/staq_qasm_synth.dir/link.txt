@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_qasm_synth.dir/qasm_synth.cpp.o -o staq_qasm_synth  -lgmp -lgmpxx 

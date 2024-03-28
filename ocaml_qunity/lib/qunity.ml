@@ -11,6 +11,12 @@ let todo = failwith "TODO"
     https://github.com/o1-labs/snarky
     *)
 
+(** 
+  Given the graph, we try to deduce the wire sizes and indices belongong to each circuit, then we drop into Qiskit
+  PyML bindings to generate these based on graph traversal
+  pyml to staq?
+*)
+
 type qubit_primitive = [ `Qubit | `QubitReg of int | `State ]
 
 type gate_primitive =
@@ -40,24 +46,28 @@ type wire =
   | Output of int
   | Connected of string * int
   | Ancilla of int (* ? *)
-  | Combined of (wire * int) list
+  | Combined of wire list * wire list
+(*
+  Wire | Gate
+  Wire can be a product wire (in/out) / max but the ancillas are always generated independently   
+  *)
 
-type subcircuit = {
-  name : string;
-  input : wire list;
-  output : wire list;
-  prep : wire; (* ancilla input *)
-  flag : wire; (* clean ancilla output *)
-  garbage : wire; (* dirty output ancilla *)
-  operation : string option;
-  internals : subcircuit_internals list;
-}
+type wire_op = Had
 
-and subcircuit_internals =
-  | Product of subcircuit_internals list
-  | Prim of gate_primitive
+type subcircuit =
+  | Subcircuit of {
+      name : string;
+      input : wire;
+      output : wire;
+      prep : wire; (* ancilla input *)
+      flag : wire; (* clean ancilla output *)
+      garbage : wire; (* dirty output ancilla *)
+      operation : string option;
+    }
+  | Wire of wire
 
 type graph = { edges : string Symtab.symtab; nodes : subcircuit Symtab.symtab }
+
 
 let build_graph (ast : ast_node) : graph =
   let name_counter = ref 0 in
@@ -70,10 +80,33 @@ let build_graph (ast : ast_node) : graph =
           (* gate_primitive *)
           (* Generate  *)
           | `Rphase (f1, f2) -> todo
-          | `U3 (f1, f2, f3) -> todo
+          | `U3 (f1, f2, f3) ->
+              let subc_name = string_of_int !name_counter in
+              let in_wire_name = !wire_counter in
+              let out_wire_name = !wire_counter + 1 in
+              let () =
+                wire_counter := !wire_counter + 1;
+                name_counter := !name_counter + 1
+              in
+              let subc =
+                Subcircuit
+                  {
+                    name = subc_name;
+                    input = Connected ("out__" ^ string_of_int in_wire_name, 1);
+                    output = Connected ("out__" ^ string_of_int out_wire_name, 1);
+                    prep = Ancilla 0;
+                    flag = Ancilla 0;
+                    garbage = Ancilla 0;
+                    operation = None;
+                  }
+              in
+              {
+                nodes = graph.nodes |> Symtab.add subc_name subc;
+                edges = graph.edges |> Symtab.add "" "";
+              }
           | `NamedPrim s -> todo
-          (* rest *)
-          | qubit_primitive -> todo
+          (* qubit_primitive *)
+          | `Qubit | `QubitReg _ | `State -> todo (* other operations *)
           | _ -> todo
         in
         List.fold_left folder graph ls
@@ -100,4 +133,9 @@ let deutsch_example =
        (ctrl (x |> f)
            bit [zero =>> x; one =>> (x |> gphase bit pi)] bit)
   |> had.
+*)
+
+(*
+https://dl.acm.org/doi/10.1145/3586039 - Modular synthesis (can we describe states on the control gate and have ti auto synthesize for us? )
+- we still need to specify sizes, which might be deducible from the inputs
 *)

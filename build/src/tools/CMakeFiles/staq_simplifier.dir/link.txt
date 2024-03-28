@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_simplifier.dir/simplifier.cpp.o -o staq_simplifier  -lgmp -lgmpxx 

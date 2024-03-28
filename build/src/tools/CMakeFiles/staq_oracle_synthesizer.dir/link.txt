@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_oracle_synthesizer.dir/oracle_synthesizer.cpp.o -o staq_oracle_synthesizer  -lgmp -lgmpxx 

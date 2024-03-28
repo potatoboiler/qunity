@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_projectq.dir/projectq.cpp.o -o staq_projectq  -lgmp -lgmpxx 

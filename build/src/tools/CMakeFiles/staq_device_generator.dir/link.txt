@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_device_generator.dir/device_generator.cpp.o -o staq_device_generator  -lgmp -lgmpxx 

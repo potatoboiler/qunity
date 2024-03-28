@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_resource_estimator.dir/resource_estimator.cpp.o -o staq_resource_estimator  -lgmp -lgmpxx 

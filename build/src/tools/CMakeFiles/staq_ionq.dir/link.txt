@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_ionq.dir/ionq.cpp.o -o staq_ionq  -lgmp -lgmpxx 

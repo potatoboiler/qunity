@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_quil.dir/quil.cpp.o -o staq_quil  -lgmp -lgmpxx 

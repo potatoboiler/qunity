@@ -1,0 +1,237 @@
+[
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -std=c++17 -o CMakeFiles/staq.dir/src/staq/main.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/staq/main.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/staq/main.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_circ.dir/circ.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/circ.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/circ.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_desugarer.dir/desugarer.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/desugarer.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/desugarer.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_device_generator.dir/device_generator.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/device_generator.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/device_generator.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_grid_synth.dir/grid_synth.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/grid_synth.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/grid_synth.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_inliner.dir/inliner.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/inliner.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/inliner.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_ionq.dir/ionq.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/ionq.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/ionq.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_lattice_surgery.dir/lattice_surgery.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/lattice_surgery.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/lattice_surgery.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_mapper.dir/mapper.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/mapper.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/mapper.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_oracle_synthesizer.dir/oracle_synthesizer.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/oracle_synthesizer.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/oracle_synthesizer.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_projectq.dir/projectq.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/projectq.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/projectq.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_qasm_synth.dir/qasm_synth.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/qasm_synth.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/qasm_synth.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_qsharp.dir/qsharp.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/qsharp.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/qsharp.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_quil.dir/quil.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/quil.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/quil.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_resource_estimator.dir/resource_estimator.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/resource_estimator.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/resource_estimator.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_rotation_optimizer.dir/rotation_optimizer.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/rotation_optimizer.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/rotation_optimizer.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/src/tools",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -DEXPR_GMP -std=c++17 -o CMakeFiles/staq_simplifier.dir/simplifier.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/src/tools/simplifier.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/src/tools/simplifier.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/main.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/main.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/main.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/gates/channel.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/gates/channel.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/gates/channel.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/optimization/cnot_resynthesis.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/optimization/cnot_resynthesis.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/optimization/cnot_resynthesis.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/optimization/rotation_folding.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/optimization/rotation_folding.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/optimization/rotation_folding.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/optimization/simplify.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/optimization/simplify.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/optimization/simplify.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/transformations/barrier_merge.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/barrier_merge.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/barrier_merge.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/transformations/desugar.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/desugar.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/desugar.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/transformations/expression_simplifier.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/expression_simplifier.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/expression_simplifier.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/transformations/inline.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/inline.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/transformations/inline.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/mapping/device.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/mapping/device.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/mapping/device.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/mapping/layout.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/mapping/layout.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/mapping/layout.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/mapping/mapping.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/mapping/mapping.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/mapping/mapping.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/synthesis/cnot_dihedral.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/synthesis/cnot_dihedral.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/synthesis/cnot_dihedral.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/synthesis/linear_reversible.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/synthesis/linear_reversible.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/synthesis/linear_reversible.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/diophantine_solver.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/diophantine_solver.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/diophantine_solver.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/exact_synthesis.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/exact_synthesis.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/exact_synthesis.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/gmp_functions.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/gmp_functions.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/gmp_functions.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/grid_operators.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/grid_operators.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/grid_operators.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/grid_solvers.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/grid_solvers.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/grid_solvers.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/grid_synth.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/grid_synth.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/grid_synth.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/matrix.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/matrix.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/matrix.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/qasm_synth.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/qasm_synth.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/qasm_synth.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/regions.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/regions.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/regions.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/rings.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/rings.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/rings.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/rz_approximation.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/rz_approximation.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/rz_approximation.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -DUSE_OPENQASM2_SPECS=false -I/home/potatoboiler/ocaml-qunity/staq/include -I/home/potatoboiler/ocaml-qunity/staq/qasmtools/include -I/home/potatoboiler/ocaml-qunity/staq/libs -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -DEXPR_GMP -std=c++17 -o CMakeFiles/unit_tests.dir/tests/grid_synth/states.cpp.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/states.cpp",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/tests/grid_synth/states.cpp"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests/SYSTEM/googlemock",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -I/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -I/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/src/gmock-all.cc",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests/SYSTEM/googlemock",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/src/gmock_main.cc",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests/SYSTEM/googletest",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -I/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -I/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/src/gtest-all.cc",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/potatoboiler/ocaml-qunity/build/unit_tests/SYSTEM/googletest",
+  "command": "/usr/bin/g++ -DPROJECT_ROOT_DIR=\\\"/home/potatoboiler/ocaml-qunity/staq\\\" -DSTAQ_VERSION_NUM=3.4 -DSTAQ_VERSION_STR=\\\"3.4\\\" -isystem /home/potatoboiler/ocaml-qunity/staq/libs/third_party -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/include -isystem /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/src/gtest_main.cc",
+  "file": "/home/potatoboiler/ocaml-qunity/staq/unit_tests/libs/googletest-release-1.12.1/googletest/src/gtest_main.cc"
+}
+]

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_qsharp.dir/qsharp.cpp.o -o staq_qsharp  -lgmp -lgmpxx 

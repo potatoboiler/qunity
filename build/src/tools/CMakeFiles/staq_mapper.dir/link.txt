@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_mapper.dir/mapper.cpp.o -o staq_mapper  -lgmp -lgmpxx 

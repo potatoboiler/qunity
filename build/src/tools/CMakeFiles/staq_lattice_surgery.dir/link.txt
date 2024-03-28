@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_lattice_surgery.dir/lattice_surgery.cpp.o -o staq_lattice_surgery  -lgmp -lgmpxx 

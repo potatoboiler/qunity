@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_circ.dir/circ.cpp.o -o staq_circ  -lgmp -lgmpxx 

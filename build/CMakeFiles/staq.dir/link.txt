@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq.dir/src/staq/main.cpp.o -o staq 

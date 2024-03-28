@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_rotation_optimizer.dir/rotation_optimizer.cpp.o -o staq_rotation_optimizer  -lgmp -lgmpxx 

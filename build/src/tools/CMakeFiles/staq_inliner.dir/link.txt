@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/staq_inliner.dir/inliner.cpp.o -o staq_inliner  -lgmp -lgmpxx 
